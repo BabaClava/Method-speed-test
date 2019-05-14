@@ -1,7 +1,10 @@
-document.getElementById('test').innerHTML = benchStart(10);
-document.title = 'complete.'
+(async () => {
+    let result = await benchStart(20);
+    document.getElementById('test').innerHTML = result
+    document.title = 'complete.'
+})()
 
-function benchStart(cycle) {
+async function benchStart(cycle) {
 
     function bench(method) {
         let newArr = () => {
@@ -30,7 +33,7 @@ function benchStart(cycle) {
         const parse_int = benchMean(i => parseInt(i), cycle);
         const plus = benchMean(i => +(i), cycle);
     const testEnd = new Date();
-    const testDuration = testEnd - testStart;
+    const testDuration = testEnd - testStart;    
 
     return `${('Number').padEnd(20, '-')}: ${number}ms <br>
             ${('parseInt').padEnd(20, '-')}: ${parse_int}ms <br>
