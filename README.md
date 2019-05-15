@@ -1,4 +1,4 @@
-# Some method speed test
+# Speed test of some methods
 ### **Number()** vs **operator "+"** vs **parseInt** (*why not?*)
 >Array of **1 mil** strings <br>
 >Cycles: 20 <br>
