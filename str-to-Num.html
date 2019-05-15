@@ -1,4 +1,17 @@
-(async () => {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="test">Loading...</div>
+
+    <script>
+        (async () => {
     let result = await benchStart(20);
     document.getElementById('test').innerHTML = result
     document.title = 'complete.'
@@ -41,3 +54,6 @@ async function benchStart(cycle) {
             cycles: ${cycle} <br>
             test duration: ${testDuration/1000}sec`;
 }
+    </script>
+</body>
+</html>
