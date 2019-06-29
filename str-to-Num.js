@@ -30,12 +30,10 @@ function benchStart(cycle) {
         }
         return sum.reduce((a,b) => a+b) /sum.length;
     }
-    const testStart = new Date();
-        const number = benchMean(i => Number(i), cycle);
-        const parse_int = benchMean(i => parseInt(i), cycle);
-        const plus = benchMean(i => +(i), cycle);
-    const testEnd = new Date();
-    const testDuration = testEnd - testStart; 
+    
+    const number = benchMean(i => Number(i), cycle);
+    const parse_int = benchMean(i => parseInt(i), cycle);
+    const plus = benchMean(i => +(i), cycle);
     
     const result = {
         'Number': {'time': number},
