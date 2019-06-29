@@ -1,4 +1,13 @@
 # Speed test of some methods
+## Usage:
+***
+### Comand line
+```
+node testName [cycles]
+cycles: <int>, default = 10
+```
+## Result:
+***
 ### **Number()** vs **operator "+"** vs **parseInt** (*why not?*)
 >Array of **1 mil** strings <br>
 >Cycles: 20 <br>
