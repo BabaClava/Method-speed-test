@@ -9,13 +9,7 @@ function benchStart(cycle) {
     console.time('Test duration');
 
     function bench(method) {
-        const newArr = () => {
-            let arr = [];
-            for (let i = 0; i < 1e6; i++) {
-                arr.push(`${i}`);            
-            }
-            return arr;
-        }
+        const newArr = () => new Array(1e6).fill('123');
         const startDate = new Date();
         newArr().forEach(method);
         const endDate = new Date();

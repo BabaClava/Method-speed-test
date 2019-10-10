@@ -11,14 +11,14 @@ cycles: <int>, default = 10
 ### **Number()** vs **operator "+"** vs **parseInt** (*why not?*)
 >Array of **1 mil** strings <br>
 >Cycles: 20 <br>
->Number--------------: 191.8ms <br>
->operator"+"----------: 206.2ms <br>
->parseInt--------------: 234.85ms <br>
->test duration: 12.658sec
+>Number--------------: 41.65ms <br>
+>parseInt--------------: 19.2ms <br>
+>operator"+"----------: 25.45ms <br>
+>test duration: 1729.252ms
 
 ### **Boolean** vs **operator "double not(!!)"**
 >Array of **1 mil** strings <br>
 >Cycles: 40 <br>
->Boolean------------: 136.675ms <br>
->"double not"(!!)----: 145.35ms <br>
->test duration: 11.282sec <br>
+>Boolean------------: 20.675ms <br>
+>"double not"(!!)----: 21.95ms <br>
+>test duration: 1711.335ms <br>

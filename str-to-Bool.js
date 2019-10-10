@@ -1,6 +1,6 @@
 'use strict'
 
-const cycle = process.argv[2] || 10;
+const cycle = process.argv[2] || 20;
 benchStart(cycle);
 
 function benchStart(cycle) {
@@ -9,13 +9,7 @@ function benchStart(cycle) {
     console.time('Test duration');
 
     function bench(method) {
-        let newArr = () => {
-            let arr = [];
-            for (let i = 0; i < 1e6; i++) {
-                arr.push(`${i}`);            
-            }
-            return arr;
-        }
+        let newArr = () => new Array(1e6).fill('123');
         const startDate = new Date();
         newArr().forEach(method);
         const endDate = new Date();
